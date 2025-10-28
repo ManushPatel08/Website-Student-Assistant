@@ -143,11 +143,7 @@ a:hover {
  * and `.main-nav li a.active` rules need to be defined together.
  */
 .main-nav li a:hover,
-.main-nav li a.active {
-    background-color: #fff;
-    color: #A90000;
-    text-decoration: none;
-}
+
 
 /*
  * OMNI-CMS NOTE: COMPONENT & CONTENT STYLES
@@ -292,19 +288,11 @@ h5 {
  * This prevents the active tab from having a hover effect.
  * I also changed `color: red` to the correct brand red `#A90000`.
  */
-.specialization-tab:not(.active):hover {
+.specialization-tab:hover {
     background-color: #ffeeee; /* A very light red */
     color: #A90000;
 }
-.specialization-tab.active {
-    background-color: #ffffff;
-    border-color: #A90000;
-    border-bottom: 2px solid #ffffff;
-    color: #A90000;
-    position: relative;
-    z-index: 1;
-    cursor: default;
-}
+
 .specialization-intro {
     margin-top: 1em;
     margin-bottom: 1em;
