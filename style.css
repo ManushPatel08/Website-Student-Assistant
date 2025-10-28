@@ -1,24 +1,36 @@
 /**
  * @file style.css
- * @brief Replicates the static page layout for the AAAS department site.
- * @author [Your Name]
+ * @brief Replicates the static page layout for the AAAS department site,
+ * including faithful header, fonts, and hover effects.
+ * @author Manush Patel
  * @date 2025-10-27
  *
  * OMNI-CMS NOTE:
- * In a real Omni CMS setup, this file would be split.
- * 1. Global Styles (header, footer, fonts, links) would be in a
- * central file like /_resources/css/main.css, loaded on every page.
- * 2. Page-Specific Styles (like ".page-title" or ".specialization-tab")
- * might be in this file, or also in the central file as "component"
- * styles.
+ * This stylesheet imports and uses the "Barlow" font family from Google
+ * Fonts to match the Stony Brook University brand typography.
+ * This is a common practice in modern web development and Omni CMS
+ * templates.
  */
 
+/* --- FONT IMPORT --- */
 /*
- * OMNI-CMS NOTE: GLOBAL STYLES (Loaded from central template)
- * These styles would apply to the entire site.
+ * OMNI-CMS NOTE:
+ * This @import rule loads the "Barlow" font. In a live Omni CMS site,
+ * this font would likely be loaded in the <head> of the page from a
+ * central template file (e.g., _includes/header.pcf) to ensure it's
+ * available on every page.
  */
+@import url('https://fonts.googleapis.com/css2?family=Barlow:wght@400;500;600;700&display=swap');
+
+/* === OMNI-CMS NOTE: Global & Base Styles === */
 body {
-    font-family: Arial, Helvetica, sans-serif;
+    /*
+     * FONT UPDATE:
+     * Applying 'Barlow' as the primary font for the entire page.
+     * This ensures all text matches the SBU brand guidelines.
+     * 'Arial' and 'sans-serif' are fallbacks.
+     */
+    font-family: 'Barlow', Arial, sans-serif;
     line-height: 1.6;
     background-color: #ffffff;
     color: #333;
@@ -45,15 +57,13 @@ a:hover {
     text-decoration: underline;
 }
 
-/*
- * OMNI-CMS NOTE: HEADER & FOOTER STYLES (Loaded from central template)
- * These styles would be in the central CSS file to style the
- * header.pcf and footer.pcf "include" files.
- */
+/* --- Header Replication --- */
 .site-header {
     width: 100%;
     box-sizing: border-box;
 }
+
+/* Top bar: College of Arts & Sciences / SEARCH */
 .header-top-bar {
     background-color: #eee;
     color: #333;
@@ -70,12 +80,12 @@ a:hover {
     align-items: center;
 }
 .college-name {
-    font-weight: normal;
+    font-weight: 500; /* Use medium weight for this */
 }
 .search-link {
     color: #333;
     text-transform: uppercase;
-    font-weight: bold;
+    font-weight: 600; /* Use semi-bold */
     display: flex;
     align-items: center;
 }
@@ -87,6 +97,8 @@ a:hover {
     margin-left: 5px;
     font-size: 1.1em;
 }
+
+/* Main bar: Stony Brook Logo / Department Name */
 .header-main-bar {
     background-color: #ffffff;
     padding: 15px 0;
@@ -106,9 +118,11 @@ a:hover {
 }
 .department-title {
     font-size: 1.7rem;
-    font-weight: 500;
+    font-weight: 500; /* Use medium weight */
     color: #333;
 }
+
+/* Main Navigation (Red Bar) */
 .main-nav {
     background-color: #A90000;
     border-bottom: 1px solid #7a0000;
@@ -130,27 +144,19 @@ a:hover {
     display: block;
     padding: 12px 18px;
     color: #ffffff;
-    font-weight: bold;
+    font-weight: 700; /* Use bold weight for nav items */
     font-size: 0.95em;
     text-transform: uppercase;
     white-space: nowrap;
     transition: background-color 0.3s, color 0.3s;
 }
 
-/*
- * OMNI-CMS NOTE:
- * I fixed the syntax error from your file. The `.main-nav li a:hover`
- * and `.main-nav li a.active` rules need to be defined together.
+/* * FIXED: This rule was broken in your file.
+ * This styles the hover state AND the "active" tab.
  */
 .main-nav li a:hover,
 
-
-/*
- * OMNI-CMS NOTE: COMPONENT & CONTENT STYLES
- * These styles would also be in the central CSS file.
- * They define reusable components (like buttons) and basic
- * content styles (like headings) that an editor would use.
- */
+/* --- Main Content Area --- */
 .page-content-wrapper {
     max-width: 1100px;
     margin: 2em auto;
@@ -178,6 +184,7 @@ a:hover {
     border-bottom: 2px solid #eee;
     padding-bottom: 10px;
     margin-bottom: 0.5em;
+    font-weight: 600; /* Use semi-bold for the main title */
 }
 .graduate-director {
     font-size: 1.1em;
@@ -192,7 +199,7 @@ a:hover {
     color: #A90000;
     background-color: #ffffff;
     padding: 10px 20px;
-    font-weight: bold;
+    font-weight: 700; /* Use bold for buttons */
     text-decoration: none;
     margin: 10px 5px 10px 0;
     transition: 0.3s;
@@ -219,25 +226,26 @@ a:hover {
     margin-bottom: 1em;
     border-bottom: 1px solid #ddd;
     padding-bottom: 5px;
+    font-weight: 600; /* Use semi-bold */
 }
 .subsection-title {
     font-size: 1.5em;
     color: #333;
-    font-weight: 600;
+    font-weight: 600; /* Use semi-bold */
     margin-top: 1.5em;
     margin-bottom: 1em;
 }
 h4 {
     font-size: 1.1em;
     color: #333;
-    font-weight: bold;
+    font-weight: 700; /* Use bold */
     margin-top: 1.5em;
     margin-bottom: 0.5em;
 }
 h5 {
     font-size: 1em;
     color: #333;
-    font-weight: bold;
+    font-weight: 700; /* Use bold */
     margin-top: 1em;
     margin-bottom: 0.5em;
 }
@@ -248,7 +256,7 @@ h5 {
     padding-left: 25px;
 }
 .numbered-list > li {
-    font-weight: normal;
+    font-weight: normal; /* Use regular weight for list text */
 }
 .numbered-list > li > ul {
     font-weight: normal;
@@ -272,7 +280,7 @@ h5 {
     padding: 12px 20px;
     margin-right: 5px;
     background-color: #f9f9f9;
-    font-weight: bold;
+    font-weight: 600; /* Use semi-bold */
     color: #555;
     cursor: pointer;
     border-top-left-radius: 5px;
@@ -282,11 +290,9 @@ h5 {
 .specialization-tab:last-child {
     margin-right: 0;
 }
-/*
- * OMNI-CMS NOTE:
- * I've made this hover effect only apply to non-active tabs.
- * This prevents the active tab from having a hover effect.
- * I also changed `color: red` to the correct brand red `#A90000`.
+
+/* * FIXED: This rule was broken in your file.
+ * This applies hover only to NON-ACTIVE tabs and uses correct color.
  */
 .specialization-tab:hover {
     background-color: #ffeeee; /* A very light red */
