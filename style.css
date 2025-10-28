@@ -1,0 +1,312 @@
+/**
+ * @file style.css
+ * @brief Replicates the static page layout for the AAAS department site,
+ * including a faithful header design, side-by-side specialization buttons,
+ * and correct hover effects.
+ * @author [Your Name]
+ * @date 2025-10-27
+ *
+ * This stylesheet mimics the existing Stony Brook University styles
+ * seen in the screenshots.
+ */
+
+/* === OMNI-CMS NOTE: Global & Base Styles === */
+body {
+    font-family: Arial, Helvetica, sans-serif;
+    line-height: 1.6;
+    background-color: #ffffff;
+    color: #333;
+    margin: 0;
+    padding: 0;
+    font-size: 15px;
+}
+
+ul, ol {
+    margin-bottom: 1.5em;
+    padding-left: 20px;
+}
+
+li {
+    margin-bottom: 0.5em;
+}
+
+a {
+    color: #A90000; /* Stony Brook Red */
+    text-decoration: none;
+}
+
+a:hover {
+    text-decoration: underline;
+}
+
+/* --- Header Replication --- */
+.site-header {
+    width: 100%;
+    box-sizing: border-box;
+}
+
+/* Top bar: College of Arts & Sciences / SEARCH */
+.header-top-bar {
+    background-color: #eee;
+    color: #333;
+    font-size: 0.8em;
+    padding: 8px 0;
+    border-bottom: 1px solid #ddd;
+}
+.header-top-inner {
+    max-width: 1100px;
+    margin: 0 auto;
+    padding: 0 20px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+.college-name {
+    font-weight: normal;
+}
+.search-link {
+    color: #333;
+    text-transform: uppercase;
+    font-weight: bold;
+    display: flex;
+    align-items: center;
+}
+.search-link:hover {
+    text-decoration: none;
+    color: #A90000;
+}
+.search-icon {
+    margin-left: 5px;
+    font-size: 1.1em;
+}
+
+/* Main bar: Stony Brook Logo / Department Name */
+.header-main-bar {
+    background-color: #ffffff;
+    padding: 15px 0;
+    border-bottom: 1px solid #eee;
+}
+.header-main-inner {
+    max-width: 1100px;
+    margin: 0 auto;
+    padding: 0 20px;
+    display: flex;
+    align-items: center;
+    gap: 15px;
+}
+.stony-brook-logo img {
+    height: 40px;
+    width: auto;
+}
+.department-title {
+    font-size: 1.7rem;
+    font-weight: 500;
+    color: #333;
+}
+
+/* Main Navigation (Red Bar) */
+.main-nav {
+    background-color: #A90000;
+    border-bottom: 1px solid #7a0000;
+}
+.nav-inner {
+    max-width: 1100px;
+    margin: 0 auto;
+    padding: 0 20px;
+}
+.main-nav ul {
+    list-style-type: none;
+    padding: 0;
+    margin: 0;
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: flex-start;
+}
+.main-nav li a {
+    display: block;
+    padding: 12px 18px;
+    color: #ffffff;
+    font-weight: bold;
+    font-size: 0.95em;
+    text-transform: uppercase;
+    white-space: nowrap;
+    transition: background-color 0.3s, color 0.3s;
+}
+
+.main-nav li a:hover,
+
+/* --- Main Content Area  --- */
+.page-content-wrapper {
+    max-width: 1100px;
+    margin: 2em auto;
+    padding: 0 20px;
+}
+
+/* Breadcrumbs */
+.breadcrumbs {
+    font-size: 0.85em;
+    color: #777;
+    margin-bottom: 1.5em;
+    padding-left: 0;
+}
+.breadcrumbs a {
+    color: #777;
+}
+.breadcrumbs a:hover {
+    color: #A90000;
+}
+
+.page-title {
+    font-size: 2.2rem;
+    color: #A90000;
+    border-bottom: 2px solid #eee;
+    padding-bottom: 10px;
+    margin-bottom: 0.5em;
+}
+
+.graduate-director {
+    font-size: 1.1em;
+    color: #555;
+    margin-bottom: 1.5em;
+}
+
+/* === Button Styles === */
+.btn-apply, .btn-outline {
+    display: inline-block;
+    border: 2px solid #A90000;
+    color: #A90000;
+    background-color: #ffffff;
+    padding: 10px 20px;
+    font-weight: bold;
+    text-decoration: none;
+    margin: 10px 5px 10px 0;
+    transition: 0.3s;
+    text-transform: uppercase;
+    font-size: 0.9em;
+}
+
+.btn-apply:hover, .btn-outline:hover {
+    background-color: #A90000;
+    color: #ffffff;
+    text-decoration: none;
+}
+
+.button-group {
+    margin: 1.5em 0;
+    display: flex;
+    flex-wrap: wrap;
+    gap: 10px;
+}
+
+/* === Content Headings === */
+.section-title {
+    font-size: 1.8em;
+    color: #A90000;
+    margin-top: 2.5em;
+    margin-bottom: 1em;
+    border-bottom: 1px solid #ddd;
+    padding-bottom: 5px;
+}
+
+.subsection-title {
+    font-size: 1.5em;
+    color: #333;
+    font-weight: 600;
+    margin-top: 1.5em;
+    margin-bottom: 1em;
+}
+
+h4 {
+    font-size: 1.1em;
+    color: #333;
+    font-weight: bold;
+    margin-top: 1.5em;
+    margin-bottom: 0.5em;
+}
+
+h5 {
+    font-size: 1em;
+    color: #333;
+    font-weight: bold;
+    margin-top: 1em;
+    margin-bottom: 0.5em;
+}
+
+/* === Nested List Styling === */
+.numbered-list {
+    list-style-type: decimal;
+    padding-left: 25px;
+}
+.numbered-list > li {
+    font-weight: normal;
+}
+.numbered-list > li > ul {
+    font-weight: normal;
+    list-style-type: disc;
+    margin-top: 0.5em;
+    padding-left: 20px;
+}
+
+/* * HOVER EFFECT: FACULTY SPECIALIZATION BUTTONS
+ * This section contains the changes for the side-by-side buttons
+ * and their hover effects.
+ */
+.specialization-tabs-container {
+    display: flex;
+    /* Removed 'flex-wrap: wrap;' to force buttons on one line */
+    margin-top: 1.5em;
+    margin-bottom: 1.5em;
+    border-bottom: 1px solid #ddd;
+}
+.specialization-tab {
+    flex: 1; /* NEW: Forces all 3 tabs to be equal width */
+    text-align: center; /* NEW: Centers the text inside */
+    border: 1px solid #ccc;
+    border-bottom: none;
+    padding: 12px 20px;
+    margin-right: 5px;
+    background-color: #f9f9f9;
+    font-weight: bold;
+    color: #555;
+    cursor: pointer; /* NEW: Changed from 'default' to 'pointer' */
+    border-top-left-radius: 5px;
+    border-top-right-radius: 5px;
+    /* NEW: Added transition for smooth hover */
+    transition: background-color 0.3s, color 0.3s;
+}
+
+/* Make sure the last tab doesn't have a right margin */
+.specialization-tab:last-child {
+    margin-right: 0;
+}
+
+/* NEW: Added hover effect for NON-ACTIVE tabs */
+.specialization-tab:hover {
+    background-color: #ffeeee; /* A very light red */
+    color: red;
+}
+/*  */
+.specialization-intro {
+    margin-top: 1em;
+    margin-bottom: 1em;
+}
+
+
+/* === Footer === */
+.site-footer {
+    background-color: #333;
+    color: #ccc;
+    padding: 2.5em;
+    margin-top: 3em;
+    text-align: center;
+    font-size: 0.9em;
+}
+.site-footer p {
+    margin: 0.5em 0;
+}
+.site-footer a {
+    color: #ccc;
+}
+.site-footer a:hover {
+    color: #ffffff;
+}
