@@ -8,19 +8,20 @@
  */
 
 /* --- FONT IMPORT --- */
+@import url('https://fonts.googleapis.com/css2?family=Merriweather:wght@300;400;700&display=swap');
 @import url('https://fonts.googleapis.com/css2?family=Barlow:wght@400;500;600;700&display=swap');
 
 /* === Global & Base Styles === */
 body {
-    font-family: 'Barlow', Arial, sans-serif;
-    line-height: 1.6;
+    /* Primary site font set to Merriweather to match the provided design image; fall back to Barlow and system serif/sans */
+    font-family: 'roboto', 'Merriweather', 'Barlow', Arial, sans-serif;
+    line-height: 1.7;
     background-color: #ffffff;
     color: #222;
     margin: 0;
     padding: 0;
     font-size: 16px; 
-    /* --- MODIFIED: Set default weight to Medium (500) --- */
-    font-weight: 500; /* Was 400 (normal) */
+    font-weight: 400; /* use regular weight for Merriweather */
 }
 ul, ol {
     margin-bottom: 1.5em;
@@ -67,18 +68,28 @@ a:hover {
     display: flex; 
     align-items: center; 
 }
-.stony-brook-logo img { 
-    height: 40px; 
+.stony-brook-logo {
+    display: flex;
+    align-items: center; /* vertically center the image with the text */
+    margin-right: 10px;
+}
+.stony-brook-logo img {
+    height: 60px; /* slightly reduced to match reference */
     width: auto;
-    margin-right: 15px;
+    margin-right: 20px;
+    margin-left: 65px;
+    display: block; /* avoid baseline alignment issues */
 }
 
 /* === MODIFIED: Header Title Styles === */
 .university-name {
-    font-size: 1.8rem;
+    font-size: 1.0rem;
     color: #A90000; /* SBU Red */
-    margin-right: 15px;
-    font-weight: 400; /* Base is regular */
+    margin-right: 12px;
+    font-weight: 600; /* slightly less bold for the brand */
+    display: flex;
+    align-items: center;
+    gap: 8px;
 }
 .university-name strong {
     font-weight: 700; /* Bold for "Stony Brook" */
@@ -86,18 +97,18 @@ a:hover {
 /* "University" is wrapped in a span and will inherit the 400 weight */
 
 .header-divider {
-    border-left: 1px solid #ccc;
+    border-left: 1px solid #0000005c;
     height: 40px; 
-    margin-right: 15px;
+    margin-right: 10px;
 }
 .department-title {
-    font-size: 1.8rem;
-    font-weight: 400; /* Regular weight for "Department of" */
-    color: #222;
-    line-height: 1.3;
+    font-size: 1.6rem;
+    font-weight: 500; /* department title weight (regular) */
+    color: #111;
+    line-height: 1.05; /* tighter line-height for visual alignment */
 }
 .department-title strong {
-    font-weight: 700; /* Bold weight for department name */
+    font-weight: 600; /* slightly less bold for the department name */
     color: #000; /* Black */
 }
 /* === END: Modification === */
