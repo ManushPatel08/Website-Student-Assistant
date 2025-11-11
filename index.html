@@ -4,8 +4,8 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>M.A. in Contemporary Asian & Asian American Studies</title>
-    
     <link rel="stylesheet" href="style.css">
+    <link rel="icon" href="./sbu logo.png">
 </head>
 <body>
 
@@ -19,10 +19,13 @@
         <div class="header-main-bar">
             <div class="header-main-inner">
                 <a href="#" class="stony-brook-logo">
-                    <img src="https://www.stonybrook.edu/assets/img/sb-logo-1.png" alt="Stony Brook University Logo">
+                    <img src="./sbu logo.png" alt="Stony Brook University Logo">
                 </a>
-                <div class="department-title">Department of Asian & Asian American Studies</div>
-            </div>
+                
+                <div class="university-name"><strong>Stony Brook</strong> <span>University</span></div>
+                <span class="header-divider"></span>
+                <div class="department-title">Department of <strong>Asian & Asian American Studies</strong></div>
+                </div>
         </div>
         <nav class="main-nav">
             <div class="nav-inner">
@@ -49,22 +52,50 @@
         <h1 class="page-title">M.A. in Contemporary Asian & Asian American Studies</h1>
         
         <p class="graduate-director">
-            <strong>Graduate Director:</strong> Atsuko Oyama
+            <strong>Graduate Director:</strong> <a target="_blank" href="https://www.stonybrook.edu/commcms/asianamerican/people/_profiles/AtsukoOyama.php">Atsuko Oyama</a>
+        </p>
+        <p>
+            <b>A New Focus Area in Korean Humanism will be launching soon! Funding available</b>. Contact Prof. <a href="">Hongkyung Kim</a> for details.
         </p>
 
-        <a href="#" class="btn-apply">APPLY HERE</a>
+        <a href="https://www.stonybrook.edu/commcms/grad/admissions/apply/graduate-programs.php" target="_blank" class="btn-apply">APPLY HERE</a>
+
+        <div class="at-a-glance-box">
+            <div class="at-a-glance-item">
+                <span class="icon">🎓</span>
+                <strong>Degree</strong>
+                <span>M.A.</span>
+            </div>
+            <div class="at-a-glance-item">
+                <span class="icon">📚</span>
+                <strong>Credits</strong>
+                <span>30</span>
+            </div>
+            <div class="at-a-glance-item">
+                <span class="icon">⏰</span>
+                <strong>Program Length</strong>
+                <span>1-2 Years</span>
+            </div>
+            <div class="at-a-glance-item">
+                <span class="icon">📅</span>
+                <strong>Priority Deadline</strong>
+                <span>January 15</span>
+            </div>
+        </div>
 
         <p>What does it mean to be an Asian in America? What are the contributions by and challenges facing Asian Americans? What is the role of linguistic, racial and ethnic identities in shaping global communication? What are the language and cultural resources we can use to combat discrimination against racialized and minoritized communities? How can we leverage Asian and Asian American languages and cultures for personal growth and societal transformation?</p>
         
-        <p>The Master of Arts in Contemporary Asia and Asian American Studies provides students with interdisciplinary training. It develops critical skills and stances in a range of areas, including Asian diaspora and cultural studies, multilingualism and intercultural communication, literary and translation studies, intellectual history, and Korean humanism.</p>
-
         <div class="button-group">
-            <a href="#" class="btn-outline">DOWNLOAD BROCHURE</a>
-            <a href="#" class="btn-outline">REQUEST INFORMATION</a>
-            <a href="#" class="btn-outline">STUDENT TESTIMONIALS</a>
+            <a target="_blank" href="https://drive.google.com/file/d/1nZDXl-YTIJoTq170HI4TocL_7qAU8lC-/view?pli=1" class="btn-outline">DOWNLOAD BROCHURE</a>
+            <a target="_blank" href="https://graduateadmissions.stonybrook.edu/register/info-AAAS" class="btn-outline">REQUEST INFORMATION</a>
+            <a target="_blank" href="https://www.stonybrook.edu/commcms/asianamerican/programs/_masters/CAASMA_Student_Testimonials.php" class="btn-outline">STUDENT TESTIMONIALS</a>
+        </div>
+        <h4 style="color: #A90000;">Faculty</h4>
+        <div class="button-group" style="margin-top: 1em;">
+            <a target="_blank" href="https://catalog.stonybrook.edu/index.php?catoid=4&navoid=2447" class="btn-outline">Graduate-level courses in Asian & Asian American Studies</a>
         </div>
 
-        <h2 class="section-title">Course Requirements and Specializations</h2>
+        <h2 class="section-title" style="margin-top: 0.9em;">Course Requirements and Specializations</h2>
         <p>30-credits, including 24-credits of course work and 6-credits of thesis/project work, over two semesters. More specifically, students are required to take the following:</p>
         
         <ol class="numbered-list">
@@ -78,124 +109,189 @@
                     <li>Contemporary Asian Diaspora</li>
                 </ul>
             </li>
-            <li>Two elective courses in any field of interest, chosen in consultation with and subject to approval of the Graduate Director (6 credits)</li>
+            <li>Two elective courses in any field of interest (6 credits)</li>
             <li>A thesis or final project (6 credits)</li>
         </ol>
 
-        <p>Students who have a strong background and interest in Asian Languages or Multilingualism and Intercultural Communication Studies should consult with the Graduate Program Director in order to choose courses for requirements 2 and 3, to appropriately focus on these areas.</p>
+        <div class="spec-tab-links">
+            <button class="spec-tab-link" onclick="openSpec(event, 'SpecAL')" id="defaultSpecOpen">
+                The Asian Languages (AL) Specialization
+            </button>
+            <button class="spec-tab-link" onclick="openSpec(event, 'SpecML')">
+                Multilingualism (ML) Specialization
+            </button>
+            <button class="spec-tab-link" onclick="openSpec(event, 'SpecGlobal')">
+                Competence in Globalization Specialization
+            </button>
+        </div>
 
-        <h2 class="section-title">Faculty</h2>
-        
-        <div class="specialization-tabs-container">
-            <div class="specialization-tab">The Asian Languages (AL) Specialization</div>
-            <div class="specialization-tab">Multilingualism and Intercultural Communication (ML) Specialization</div>
-            <div class="specialization-tab">Competence in Globalization Specialization</div>
+        <div id="SpecAL" class="spec-tab-content">
+            <p>Students who have a strong interest in languages may take graduate level Asian language courses as their two elective courses (For "Requirement (3)").</p>
+            
+            <div class="lang-tab-links">
+                <button class="lang-tab-link" onclick="openLang(event, 'Chinese')" id="defaultLangOpen">Chinese</button>
+                <button class="lang-tab-link" onclick="openLang(event, 'Japanese')">Japanese</button>
+                <button class="lang-tab-link" onclick="openLang(event, 'Korean')">Korean</button>
+            </div>
+
+            <div id="Chinese" class="lang-tab-content">
+                <h4>Graduate level Chinese Language courses:</h4>
+                <ul>
+                    <li>CHI 501: Advanced Chinese I</li>
+                    <li>CHI 502: Advanced Chinese II</li>
+                    <li>CHI 511: Readings: Journalistic Chinese</li>
+                    <li>CHI 512: Readings in Classical Chinese</li>
+                    <li>CHI 521: Chinese Poetry & Short Stories</li>
+                </ul>
+                <h4>Faculty:</h4>
+                <p><strong>Chinese:</strong> 
+                    <a href="https://www.stonybrook.edu/commcms/asianamerican/people/_profiles/Hannah%20Li.php#BIOGRAPHY">Tingda (Hannah) Li</a>,
+                    <a href="https://www.stonybrook.edu/commcms/asianamerican/people/_profiles/DongmeiZeng.php#BIOGRAPHY">Dongmei Zeng</a>, 
+                    <a href="https://www.stonybrook.edu/commcms/asianamerican/people/_profiles/_YiWang.php#Biography">Yi Wang</a></p>
+            </div>
+
+            <div id="Japanese" class="lang-tab-content">
+                <h4>Graduate level Japanese language courses:</h4>
+                <ul>
+                    <li>JPN 501: Advanced Japanese I</li>
+                    <li>JPN 502: Advanced Japanese II</li>
+                    <li>JPN 510: Business Japanese</li>
+                    <li>JPN 511: Advanced Japanese III</li>
+                    <li>JPN 512: Advanced Japanese IV</li>
+                </ul>
+                <h4>Faculty:</h4>
+                <p><strong>Japanese:</strong> 
+                    <a href="https://www.stonybrook.edu/commcms/asianamerican/people/_profiles/EvaNagase.php#Biography">Eva Nagase</a>, 
+                    <a href="https://www.stonybrook.edu/commcms/asianamerican/people/_profiles/Chikako%20Nakamura.php">Chikako Nakamura</a>, 
+                    <a href="https://www.stonybrook.edu/commcms/asianamerican/people/_profiles/AtsukoOyama.php">Atsuko Oyama</a>, 
+                    <a href="https://www.stonybrook.edu/commcms/asianamerican/people/_profiles/ErikoSato.php#Biography">Eriko Sato</a></p>
+            </div>
+
+            <div id="Korean" class="lang-tab-content">
+                <h4>Graduate level Korean language courses:</h4>
+                <ul>
+                    <li>KOR 501: Advanced Korean I</li>
+                    <li>KOR 502: Advanced Korean II</li>
+                    <li>KOR 511: Advanced Korean III</li>
+                    <li>KOR 512: Advanced Korean IV</li>
+                </ul>
+                <h4>Faculty:</h4>
+                <p><strong>Korean:</strong> 
+                    <a href="https://www.stonybrook.edu/commcms/asianamerican/people/_profiles/JiwonHwang.php">Jiwon Hwang</a>, 
+                    <a href="https://www.stonybrook.edu/commcms/asianamerican/people/_profiles/HeejeongSohn.php">Heejeong Sohn</a></p>
+            </div>
+        </div>
+
+        <div id="SpecML" class="spec-tab-content">
+            <p>Students who have a strong background and interest in Multilingualism and Intercultural Communication may choose relevant courses for four of the five categories in "Requirement (2)" and for two elective courses in "Requirement (3)."</p>
+            
+            <h4>Courses:</h4>
+            <ul>
+                <li>AAS 545: Learning of Asian Languages</li>
+                <li>AAS 570: Intercultural Communication</li>
+                <li>AAS 574: Accent and Language Justice</li>
+                <li>AAS 575: Multilingualism & Communication in Asia</li>
+                <li>AAS 576: Culture and Conversation</li>
+                <li>AAS 577: Language, Culture and Social Change</li>
+                <li>AAS 578: Chinese Sociolinguistics</li>
+                <li>AAS 585: Translation Studies of Asian Languages</li>
+                <li>CHI 526: Structure of Mandarin Chinese</li>
+                <li>JPN 526: Structure of Japanese</li>
+                <li>KOR 526: Structure of Korean</li>
+            </ul>
+            <p><em>* This MA degree qualifies as a "relevant MA degree" for teachers of Chinese, Japanese and Korean with initial certification.</em></p>
+
+            <h4>Faculty:</h4>
+            <p>Agnes Weiyun He, Jiwon Hwang, Eriko Sato, Shikaripur N. Sridhar, Yi Wang</p>
         </div>
         
-        <p class="specialization-intro">Students who have a strong interest in languages may take graduate level Asian language courses as their two elective courses (For "Requirement (3)").</p>
+        <div id="SpecGlobal" class="spec-tab-content">
+            <p>Our CAAS M.A. degree can be earned with a NEW GLI Focus. This new, point-based credential focuses on giving students practical, competency based experience in issues pertaining to globalization alongside their academic study. Aimed at budding practitioners, the GLI Focus will expand your MA degree to put knowledge into practice and situate Asian-American Studies on the global scale.</p>
+            
+            <p>Adding the GLI Focus to your MA is straightforward and does not require any extra credits. Alongside your CAAS MA degree, complete various GLI Tasks with the advising of the Institute for Globalization Studies. <a href="#">Read more here</a> about the tasks required for a GLI Focus in your MA degree.</p>
+            
+            <p>Students who have a strong interest in globalization and Asian diaspora studies may take relevant courses in AAAS and other departments (e.g., History, English, Sociology, etc.) as part of "Requirements (2) and (3)."</p>
+            
+            <h4>AAS courses pertaining to globalization and Asian diaspora</h4>
+            <ul>
+                <li>AAS 533: The Unending Korean War</li>
+                <li>AAS 570: Intercultural Communication</li>
+                <li>AAS 573: Orientalism</li>
+            </ul>
+
+            <p>Contact <a href="#">Dr. Andrea Fedi</a> for more information.</p>
+            <p><a href="#">andrea.fedi@stonybrook.edu</a></p>
+
+            <h4>Faculty:</h4>
+            <p>Nerissa S. Balce, Sandra So Hee Chi Kim</p>
+            <h4>Affiliated Faculty</h4>
+            </div>
+        <h2 class="section-title">What Our Students Say</h2>
+        <div class="testimonials-section">
+            <div class="testimonial-card">
+                <p>"This program completely changed how I view the world. The faculty are incredibly supportive, and the research opportunities are top-notch."</p>
+                <span class="testimonial-author">- Alumnus Name, Class of '24</span>
+            </div>
+            <div class="testimonial-card">
+                <p>"I loved the flexibility to combine language studies with cultural history. It prepared me perfectly for my career in international relations."</p>
+                <span class="testimonial-author">- Current Student, M.A. '25</span>
+            </div>
+        </div>
         
-        <h4>Graduate level Asian Language courses:</h4>
-        
-        <h5>Chinese language courses:</h5>
-        <ul>
-            <li>CHI 501: Advanced Chinese I</li>
-            <li>CHI 502: Advanced Chinese II</li>
-            <li>CHI 511: Readings: Journalistic Chinese</li>
-            <li>CHI 512: Readings in Classical Chinese</li>
-            <li>CHI 521: Chinese Poetry & Short Stories</li>
-        </ul>
-
-        <h5>Japanese language courses:</h5>
-        <ul>
-            <li>JPN 501: Advanced Japanese I</li>
-            <li>JPN 502: Advanced Japanese II</li>
-            <li>JPN 510: Business Japanese</li>
-            <li>JPN 511: Advanced Japanese III</li>
-            <li>JPN 512: Advanced Japanese IV</li>
-        </ul>
-
-        <h5>Korean language courses:</h5>
-        <ul>
-            <li>KOR 501: Advanced Korean I</li>
-            <li>KOR 502: Advanced Korean II</li>
-            <li>KOR 511: Advanced Korean III</li>
-            <li>KOR 512: Advanced Korean IV</li>
-        </ul>
-
-        <h4>Faculty:</h4>
-        <p><strong>Chinese:</strong> Tingda (Hannah) Li, Dongmei Zeng, Yi Wang</p>
-        <p><strong>Japanese:</strong> Eva Nagase, Chikako Nakamura, Atsuko Oyama, Eriko Sato</p>
-        <p><strong>Korean:</strong> Jiwon Hwang, Heejeong Sohn</p>
-
-
         <h2 class="section-title">Admission</h2>
         <ul>
+            <strong>
             <li>Statement of purpose (500-1000 words)</li>
             <li>Three letters of recommendation</li>
             <li>Undergraduate transcript</li>
             <li>Official report of TOEFL (including TOEFL Home Edition), or IELTS (for international applicants from non-English speaking countries). See the details.</li>
-            <li><strong>GRE is NOT required</strong></li>
+            <li>GRE is NOT required</li>
+            </strong>
         </ul>
 
         <h2 class="section-title">Deadlines</h2>
-        <p>Fall admissions: May 1st</p>
-        <p>Spring admissions: November 1st</p>
-        <p>Early consideration deadline for all students: February 15th</p>
-        <p>Priority deadline for domestic students for a scholarship consideration: January 15th</p>
+        <ul>
+            <li>Fall Admissions: <strong>May 1st</strong></li>
+            <li>Spring Admissions: <strong>November 1st</strong></li>
+            <li>Early Consideration (All Students): <strong>February 15th</strong></li>
+            <li>Priority Deadline (Domestic Students for Scholarship): <strong>January 15th</strong></li>
+        </ul>
 
         <h2 class="section-title">Scholarships</h2>
         <ul>
             <li>Graduate Assistantships may be available through the Centers affiliated with the department.</li>
-            <li>The Center for Korean Studies: Graduate Scholarship Opportunities</li>
+            <li>The Center for Korean Studies: <a target="_blank" href="https://www.stonybrook.edu/commcms/korean/Opportunities/grad#:~:text=The%20Center%20for%20Korean%20Studies,are%20open%20for%20Spring%202021.">Graduate Scholarship Opportunities</a></li>
         </ul>
-        <a href="#" class="btn-outline">VIEW DEADLINES</a>
+        <a target="_blank" href="https://graduateadmissions.stonybrook.edu/portal/deadline_dates?tab=home" class="btn-outline">VIEW DEADLINES</a>
 
         <h2 class="section-title">Links and Resources:</h2>
         <ul>
-            <li><a href="#">Graduate School</a></li>
-            <li><a href="#">Apply Now</a></li>
-            <li><a href="#">Graduate Bulletin</a></li>
-            <li><a href="#">Student Resources</a></li>
-            <li><a href="#">Graduate Student Organizations</a></li>
-            <li><a href="#">Career Center</a></li>
-        </ul>
-
-        <h2 class="section-title">Graduate Courses (by name):</h2>
-        <ul>
-            <li><a href="#">AAS (Asian & Asian American Studies) graduate courses</a></li>
-            <li><a href="#">CHI (Chinese) graduate courses</a></li>
-            <li><a href="#">JPN (Japanese) graduate courses</a></li>
-            <li><a href="#">KOR (Korean) graduate courses</a></li>
-            <li><a href="#">Graduate Research in MA-CAAAS: List of Thesis and Projects</a></li>
-        </ul>
-
-        <h2 class="section-title">Affiliated Centers:</h2>
-        <ul>
-            <li><a href="#">Center for Korean Studies</a></li>
-            <li><a href="#">Center for Multilingual and Intercultural Communication</a></li>
-            <li><a href="#">Japan Center at Stony Brook</a></li>
-            <li><a href="#">Mattoo Center for Indian Studies</a></li>
-            <li><a href="#">The Wang Center</a></li>
+            <li><a target="_blank" href="https://www.stonybrook.edu/grad/">Graduate School</a></li>
+            <li><a target="_blank" href="https://www.stonybrook.edu/commcms/grad/admissions/apply/graduate-programs.php">Apply Now</a></li>
+            <li><a target="_blank" href="https://catalog.stonybrook.edu/index.php?catoid=4/">Graduate Bulletin</a></li>
+            <li><a target="_blank" href="https://www.stonybrook.edu/commcms/grad/academics/student_resources.php">Student Resources</a></li>
+            <li><a target="_blank" href="https://www.stonybrookgso.org/">Graduate Student Organizations</a></li>
+            <li><a target="_blank" href="https://www.stonybrook.edu/career-center/">Career Center</a></li>
         </ul>
 
         <h2 class="section-title">Contact</h2>
         <p>
-            <strong>Professor Atsuko Oyama</strong><br>
+            <strong>Professor <a href="https://www.stonybrook.edu/commcms/asianamerican/people/_profiles/AtsukoOyama.php">Atsuko Oyama</a></strong><br>
             Director of Graduate Studies<br>
             Department of Asian and Asian American Studies<br>
             College of Arts and Sciences, Stony Brook University
         </p>
-        <p>
-            <strong>Atsuko Oyama</strong><br>
-            631-632-4030
-        </p>
 
-    </main> <footer class="site-footer">
+    </main> 
+    
+    <footer class="site-footer">
         <p>Asian & Asian American Studies | 1046 Humanities Building | Stony Brook, NY | 11794-5343</p>
         <p>Phone: (631) 632-4030</p>
         <p>Discrimination | Sexual Misconduct | Accessibility Barrier</p>
         <p>&copy; 2025 Stony Brook University</p>
     </footer>
+
+    <script src="script.js"></script>
 
 </body>
 </html>
