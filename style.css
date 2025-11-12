@@ -114,7 +114,13 @@ a:hover {
 /* === END: Modification === */
 
 
-.main-nav { background-color: #A90000; border-bottom: 1px solid #7a0000; }
+.main-nav { 
+    background-color: #A90000; 
+    border-bottom: 1px solid #7a0000; 
+    position: sticky;
+    top: 0;
+    z-index: 1000;
+}
 .nav-inner {
     max-width: 1300px;
     margin: 0 auto; 
@@ -130,6 +136,65 @@ a:hover {
 }
 .main-nav li a { display: block; padding: 12px 18px; color: #ffffff; font-weight: 700; font-size: 0.95em; text-transform: uppercase; white-space: nowrap; transition: background-color 0.3s, color 0.3s; }
 .main-nav li a:hover { background-color: #ffffff; color: #A90000; }
+
+/* Dropdown submenu styles */
+.main-nav li { position: relative; }
+.main-nav li .dropdown {
+    display: none; /* hidden by default */
+    position: absolute;
+    top: calc(100% + 6px); /* just below the button */
+    left: 0; /* left-aligned to the nav item */
+    min-width: 220px;
+    background: rgba(0, 0, 0, 0.938); /* slightly more opaque than before */
+    color: #fff;
+    /* reduce container padding so the menu occupies less vertical space */
+    padding: 4px 0;
+    border-radius: 2px;
+    box-shadow: 0 6px 18px rgba(0,0,0,0.25);
+    z-index: 1100;
+}
+.main-nav li .dropdown li { display: block; margin: 0; }
+.main-nav li .dropdown li a {
+    display: block;
+    /* reduced padding and line-height to tighten vertical spacing */
+    padding: 6px 14px;
+    line-height: 1.5;
+    color: #fff;
+    font-weight: 600;
+    text-transform: none; /* keep normal casing for dropdown items */
+    white-space: nowrap; /* keep each item on a single line */
+    text-align: left; /* left aligned content */
+    font-size: 0.95em;
+}
+.main-nav li .dropdown li a:hover { background: rgba(255,255,255,0.06); color: #fff; }
+
+/* Show on hover and when the list item receives focus (keyboard) */
+.main-nav li:hover > .dropdown,
+.main-nav li:focus-within > .dropdown {
+    display: block;
+}
+
+/* Limit dropdown height and allow scrolling for long lists */
+.main-nav li .dropdown { 
+    /* Allow the dropdown to size to its content horizontally so items don't wrap
+       and avoid vertical scrollbars. Using max-content/min-width lets the menu
+       expand to fit long items instead of constraining height and enabling
+       a scrollbar. */
+    max-height: none;
+    overflow-y: visible;
+    min-width: max-content; /* grow to fit content on one line */
+    white-space: nowrap; /* keep dropdown content on a single line */
+}
+
+/* Mobile: make dropdowns flow in document (no absolute positioning) */
+@media (max-width: 768px) {
+    .main-nav ul { flex-direction: column; align-items: stretch; }
+    .main-nav li { width: 100%; }
+    .main-nav li .dropdown { position: static; top: auto; left: auto; box-shadow: none; background: #333; display: none; }
+    .main-nav li .dropdown li a { color: #fff; padding-left: 32px; }
+    /* We'll use focus-within to reveal items on keyboard; hover isn't reliable on touch */
+    .main-nav li:focus-within > .dropdown { display: block; }
+}
 
 /* --- Main Content Area --- */
 .page-content-wrapper {

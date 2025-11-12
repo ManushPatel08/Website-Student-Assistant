@@ -30,21 +30,101 @@
                 <div class="department-title"><strong>Department of Asian & Asian American Studies</strong></div>
             </div>
         </div>
-        <nav class="main-nav">
-            <div class="nav-inner">
-                <ul>
-                    <li><a href="#">About</a></li>
-                    <li><a href="#">People</a></li>
-                    <li><a href="#">Programs</a></li>
-                    <li><a href="#">Courses</a></li>
-                    <li><a href="#">Centers</a></li>
-                    <li><a href="#">For Students</a></li>
-                    <li><a href="#">News & Events</a></li>
-                    <li><a href="#">Support Us</a></li>
-                </ul>
-            </div>
-        </nav>
     </header>
+
+    <!-- Move the nav outside the header so CSS `position: sticky` works reliably -->
+    <nav class="main-nav">
+        <div class="nav-inner">
+            <ul>
+                <li>
+                    <a href="#">About</a>
+                    <ul class="dropdown">
+                        <li><a href="#">Leadership</a></li>
+                        <li><a href="#">Our Department</a></li>
+                        <li><a href="#">Faculty Strengths</a></li>
+                        <li><a href="#">Contact</a></li>
+                    </ul>
+                </li>
+                <li>
+                    <a href="#">People</a>
+                    <ul class="dropdown">
+                        <li><a href="#">Department Chair &amp; Directors</a></li>
+                        <li><a href="#">Full-Time Faculty</a></li>
+                        <li><a href="#">Affiliated Faculty</a></li>
+                        <li><a href="#">Retired &amp; Emeritus Faculty</a></li>
+                        <li><a href="#">Part-Time Faculty</a></li>
+                        <li><a href="#">Staff</a></li>
+                        <li><a href="#">Alumni Graduate Students</a></li>
+                        <li><a href="#">Current Graduate Students</a></li>
+                        <li><a href="#">Visiting Scholars</a></li>
+                    </ul>
+                </li>
+                <li>
+                    <a href="#">Programs</a>
+                    <ul class="dropdown">
+                        <li><a href="#">M.A. Contemporary Asian And Asian American Studies</a></li>
+                        <li><a href="#">M.A. History Of Philosophies, East And West</a></li>
+                        <li><a href="#">BA/MA Accelerated Program In Asian And Asian American Studies</a></li>
+                        <li><a href="#">Asian And Asian American Studies Major/Minor</a></li>
+                        <li><a href="#">Asian And Asian American Studies Major With Teacher Certification</a></li>
+                        <li><a href="#">Minor In Asian American Studies</a></li>
+                        <li><a href="#">Minor In China Studies</a></li>
+                        <li><a href="#">Minor In Japanese Studies</a></li>
+                        <li><a href="#">Minor In Korean Studies</a></li>
+                        <li><a href="#">Minor In Religious Studies</a></li>
+                        <li><a href="#">Minor In South Asian Studies</a></li>
+                        <li><a href="#">Pathway To Major/Minor</a></li>
+                    </ul>
+                </li>
+                <li>
+                    <a href="#">Courses</a>
+                    <ul class="dropdown">
+                        <li><a href="#">Undergraduate Courses</a></li>
+                        <li><a href="#">Graduate Courses</a></li>
+                        <li><a href="#">Class Schedules By Semester</a></li>
+                        <li><a href="#">Course Catalog</a></li>
+                    </ul>
+                </li>
+                <li>
+                    <a href="#">Centers</a>
+                    <ul class="dropdown">
+                        <li><a href="#">Center For India Studies</a></li>
+                        <li><a href="#">The Japan Center</a></li>
+                        <li><a href="#">Center For Korean Studies</a></li>
+                        <li><a href="#">Center For Multilingual And Intercultural Communication</a></li>
+                        <li><a href="#">The Wang Center</a></li>
+                    </ul>
+                </li>
+                <li>
+                    <a href="#">For Students</a>
+                    <ul class="dropdown">
+                        <li><a href="#">Challenge Exams</a></li>
+                        <li><a href="#">Internships And Jobs</a></li>
+                        <li><a href="#">Scholarships</a></li>
+                        <li><a href="#">Study Abroad</a></li>
+                        <li><a href="#">Student Newsletter</a></li>
+                        <li><a href="#">Upper Division Writing Requirement Form</a></li>
+                    </ul>
+                </li>
+                <li>
+                    <a href="#">News &amp; Events</a>
+                    <ul class="dropdown">
+                        <li><a href="#">News &amp; Events</a></li>
+                        <li><a href="#">Calendar</a></li>
+                        <li><a href="#">Testimonials</a></li>
+                    </ul>
+                </li>
+                <li>
+                    <a href="#">Support Us</a>
+                    <ul class="dropdown">
+                        <li><a href="#">Giving Day</a></li>
+                        <li><a href="#">Alumni</a></li>
+                        <li><a href="#">Donate / Support the Department</a></li>
+                    </ul>
+                </li>
+            </ul>
+        </div>
+    </nav>
 
     <main class="page-content-wrapper">
 
