@@ -8,20 +8,20 @@
  */
 
 /* --- FONT IMPORT --- */
-@import url('https://fonts.googleapis.com/css2?family=Merriweather:wght@300;400;700&display=swap');
+/* @import url('https://fonts.googleapis.com/css2?family=Roboto:wght@400;500;700&display=swap'); */
 @import url('https://fonts.googleapis.com/css2?family=Barlow:wght@400;500;600;700&display=swap');
 
 /* === Global & Base Styles === */
 body {
-    /* Primary site font set to Merriweather to match the provided design image; fall back to Barlow and system serif/sans */
-    font-family: 'roboto', 'Merriweather', 'Barlow', Arial, sans-serif;
+
+    font-family: 'Roboto', 'Barlow', Arial, sans-serif;
     line-height: 1.7;
     background-color: #ffffff;
     color: #222;
     margin: 0;
     padding: 0;
     font-size: 16px; 
-    font-weight: 400; /* use regular weight for Merriweather */
+    font-weight: 1000; /* use regular weight for Merriweather */
 }
 ul, ol {
     margin-bottom: 1.5em;
